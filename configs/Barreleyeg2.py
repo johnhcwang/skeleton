@@ -41,6 +41,9 @@ FRU_INSTANCES = {
     '<inventory_root>/system/chassis/fan0' : { 'fru_type' : 'FAN','is_fru' : True, },
     '<inventory_root>/system/chassis/fan1' : { 'fru_type' : 'FAN','is_fru' : True, },
     '<inventory_root>/system/chassis/fan2' : { 'fru_type' : 'FAN','is_fru' : True, },
+    '<inventory_root>/system/chassis/fan3' : { 'fru_type' : 'FAN','is_fru' : True, },
+    '<inventory_root>/system/chassis/fan4' : { 'fru_type' : 'FAN','is_fru' : True, },
+    '<inventory_root>/system/chassis/fan5' : { 'fru_type' : 'FAN','is_fru' : True, },
 
     '<inventory_root>/system/chassis/motherboard/bmc' : { 'fru_type' : 'BMC','is_fru' : False, 'manufacturer' : 'ASPEED' },
 
@@ -348,6 +351,36 @@ HWMON_CONFIG = {
         'names' : {
                 'temp1_input' : { 'object_path' : 'temperature/ambient','poll_interval' : 5000,'scale' : -3,'units' : 'C' },
         }
+    },
+    '9-002d' :  {
+	'names' : {
+                'pwm1' : { 'object_path' : 'speed/fan5','poll_interval' : 10000,'scale' : 1,'units' : '' },
+                'pwm2' : { 'object_path' : 'speed/fan4','poll_interval' : 10000,'scale' : 1,'units' : '' },
+                'pwm3' : { 'object_path' : 'speed/fan3','poll_interval' : 10000,'scale' : 1,'units' : '' },
+                'fan1_input' : { 'object_path' : 'tach/fan5B','poll_interval' : 10000,'scale' : 1,'units' : 'rpm' },
+                'fan2_input' : { 'object_path' : 'tach/fan5A','poll_interval' : 10000,'scale' : 1,'units' : 'rpm' },
+                'fan3_input' : { 'object_path' : 'tach/fan4B','poll_interval' : 10000,'scale' : 1,'units' : 'rpm' },
+                'fan4_input' : { 'object_path' : 'tach/fan4A','poll_interval' : 10000,'scale' : 1,'units' : 'rpm' },
+                'fan5_input' : { 'object_path' : 'tach/fan3B','poll_interval' : 10000,'scale' : 1,'units' : 'rpm' },
+                'fan6_input' : { 'object_path' : 'tach/fan3A','poll_interval' : 10000,'scale' : 1,'units' : 'rpm' },
+	}
+    },
+    '9-002e' : {
+	'names' : {
+                'pwm1' : { 'object_path' : 'speed/fan2','poll_interval' : 10000,'scale' : 1,'units' : '' },
+                'pwm2' : { 'object_path' : 'speed/fan1','poll_interval' : 10000,'scale' : 1,'units' : '' },
+                'pwm3' : { 'object_path' : 'speed/fan0','poll_interval' : 10000,'scale' : 1,'units' : '' },
+                'fan1_input' : { 'object_path' : 'tach/fan2B','poll_interval' : 10000,'scale' : 1,'units' : 'rpm' },
+                'fan2_input' : { 'object_path' : 'tach/fan2A','poll_interval' : 10000,'scale' : 1,'units' : 'rpm' },
+                'fan3_input' : { 'object_path' : 'tach/fan1B','poll_interval' : 10000,'scale' : 1,'units' : 'rpm' },
+                'fan4_input' : { 'object_path' : 'tach/fan1A','poll_interval' : 10000,'scale' : 1,'units' : 'rpm' },
+                'fan5_input' : { 'object_path' : 'tach/fan0B','poll_interval' : 10000,'scale' : 1,'units' : 'rpm' },
+                'fan6_input' : { 'object_path' : 'tach/fan0A','poll_interval' : 10000,'scale' : 1,'units' : 'rpm' },
+                'in2_input' : { 'object_path' : 'voltage/P12V_AUX_B','poll_interval' : 10000,'scale' : -3,'units' : 'V' },
+                'in3_input' : { 'object_path' : 'voltage/P3V3_AUX_FB','poll_interval' : 10000,'scale' : -3,'units' : 'V' },
+                'in4_input' : { 'object_path' : 'voltage/P12V_B','poll_interval' : 10000,'scale' : -3,'units' : 'V' },
+                'in5_input' : { 'object_path' : 'voltage/P12V_C','poll_interval' : 10000,'scale' : -3,'units' : 'V' },
+	}
     },
     '0-0064': {
         'names': {
