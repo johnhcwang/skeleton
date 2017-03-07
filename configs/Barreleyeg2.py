@@ -352,6 +352,23 @@ HWMON_CONFIG = {
                 'temp1_input' : { 'object_path' : 'temperature/ambient','poll_interval' : 5000,'scale' : -3,'units' : 'C' },
         }
     },
+    '0-0064' : {
+        'labels' : {
+               'vout1' :  { 'object_path' : 'voltage/sequencer/P12V','poll_interval' : 10000,'scale' : -3,'units' : 'V' },
+               'vout2' :  { 'object_path' : 'voltage/sequencer/P5V','poll_interval' : 10000,'scale' : 1,'units' : 'V' },
+               'vout3' :  { 'object_path' : 'voltage/sequencer/P3V3','poll_interval' : 10000,'scale' : 1,'units' : 'V' },
+               'vout4' :  { 'object_path' : 'voltage/sequencer/P1V8','poll_interval' : 10000,'scale' : 1,'units' : 'V' },
+               'vout5' :  { 'object_path' : 'voltage/sequencer/P1V05','poll_interval' : 10000,'scale' : 1,'units' : 'V' },
+               'vout6' :  { 'object_path' : 'voltage/sequencer/P1V0_SATA','poll_interval' : 10000,'scale' : 1,'units' : 'V' },
+               'vout7' :  { 'object_path' : 'voltage/sequencer/P0V7_CPU0','poll_interval' : 10000,'scale' : 1,'units' : 'V' },
+               'vout8' :  { 'object_path' : 'voltage/sequencer/P0V7_CPU1','poll_interval' : 10000,'scale' : 1,'units' : 'V' },
+               'vout9' :  { 'object_path' : 'voltage/sequencer/P1V5_CPU','poll_interval' : 10000,'scale' : 1,'units' : 'V' },
+               'vout10' :  { 'object_path' : 'voltage/sequencer/P1V0_CPU0','poll_interval' : 10000,'scale' : 1,'units' : 'V' },
+               'vout11' :  { 'object_path' : 'voltage/sequencer/P1V0_CPU1','poll_interval' : 10000,'scale' : 1,'units' : 'V' },
+               'vout12' :  { 'object_path' : 'voltage/sequencer/P0V8_CPU0','poll_interval' : 10000,'scale' : 1,'units' : 'V' },
+               'vout13' :  { 'object_path' : 'voltage/sequencer/P0V8_CPU1','poll_interval' : 10000,'scale' : 1,'units' : 'V' },
+        }
+    },
     '9-002d' :  {
 	'names' : {
                 'pwm1' : { 'object_path' : 'speed/fan5','poll_interval' : 10000,'scale' : 1,'units' : '' },
@@ -381,12 +398,6 @@ HWMON_CONFIG = {
                 'in4_input' : { 'object_path' : 'voltage/P12V_B','poll_interval' : 10000,'scale' : -3,'units' : 'V' },
                 'in5_input' : { 'object_path' : 'voltage/P12V_C','poll_interval' : 10000,'scale' : -3,'units' : 'V' },
 	}
-    },
-    '0-0064': {
-        'names': {
-        },
-        'labels': {
-        },
     },
 }
 
