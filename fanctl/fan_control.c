@@ -52,8 +52,10 @@ int get_connection(sd_bus *bus, char *connection, const char *obj_path)
 				"GetObject",
 				&bus_error,
 				&m,
-				"s",
-				obj_path);
+				"sas",
+				obj_path,
+				1,
+				"org.openbmc.SensorValue");
 	if (rc < 0) {
 		fprintf(stderr,
 			"Failed to GetObject: %s\n", bus_error.message);
@@ -378,7 +380,7 @@ int start_fan_services(fan_info_t *info)
 
 	/* If we had success in adding the providers, request for a bus name. */
 	rc = sd_bus_request_name(info->bus,
-			"org.openbmc.control.Fans", 0);
+			"org.openbmc.control.Fans", SD_BUS_NAME_QUEUE);
 	if (rc < 0) {
 		fprintf(stderr, "fanctl: Failed to acquire service name: %s\n",
 				strerror(-rc));
