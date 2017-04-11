@@ -350,6 +350,24 @@ HWMON_CONFIG = {
         'labels': {
         },
     },
+    'iio-hwmon' : {
+        'names' : {
+                'in1_input' : { 'object_path' : 'voltage/BMC_VM_P5VAUX','poll_interval' : 10000,'scale' : -3,'units' : 'V' },
+                'in2_input' : { 'object_path' : 'voltage/BMC_VM_P2V5AUX','poll_interval' : 10000,'scale' : -3,'units' : 'V' },
+                'in3_input' : { 'object_path' : 'voltage/BMC_VM_P3V3AUX','poll_interval' : 10000,'scale' : -3,'units' : 'V' },
+                'in4_input' : { 'object_path' : 'voltage/BMC_VM_P1V1AUX','poll_interval' : 10000,'scale' : -3,'units' : 'V' },
+                'in5_input' : { 'object_path' : 'voltage/BMC_VM_CPU0_VPP1','poll_interval' : 10000,'scale' : -3,'units' : 'V' },
+                'in6_input' : { 'object_path' : 'voltage/BMC_VM_CPU0_VPP2','poll_interval' : 10000,'scale' : -3,'units' : 'V' },
+                'in7_input' : { 'object_path' : 'voltage/BMC_VM_CPU1_VPP1','poll_interval' : 10000,'scale' : -3,'units' : 'V' },
+                'in8_input' : { 'object_path' : 'voltage/BMC_VM_CPU1_VPP2','poll_interval' : 10000,'scale' : -3,'units' : 'V' },
+                'in9_input' : { 'object_path' : 'voltage/BMC_VM_CPU0_VDDQ1','poll_interval' : 10000,'scale' : -3,'units' : 'V' },
+                'in10_input' : { 'object_path' : 'voltage/BMC_VM_CPU0_VDDQ2','poll_interval' : 10000,'scale' : -3,'units' : 'V' },
+                'in11_input' : { 'object_path' : 'voltage/BMC_VM_CPU1_VDDQ1','poll_interval' : 10000,'scale' : -3,'units' : 'V' },
+                'in12_input' : { 'object_path' : 'voltage/BMC_VM_CPU1_VDDQ2','poll_interval' : 10000,'scale' : -3,'units' : 'V' },
+                'in13_input' : { 'object_path' : 'voltage/BMC_VM_RTC_BAT','poll_interval' : 10000,'scale' : -3,'units' : 'V' },
+                'in14_input' : { 'object_path' : 'voltage/BMC_VM_P1V2AUX','poll_interval' : 10000,'scale' : -3,'units' : 'V' },
+        }
+    },
 }
 
 GPIO_CONFIGS = {
